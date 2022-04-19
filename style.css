@@ -94,9 +94,15 @@ body {
     /* line-height: 1; ????*/
 }
 
+.calculating-zone {
+    margin-top: 8px; /*마진 병합이 일어나는 것 같다...*/
+}
+
 .balance-money {
+    float: left;
     width: 200px;
     clear: left;
+    margin-right: 12px;
 
     border-radius: 5px;
     background-color: #eae8fe;
@@ -106,18 +112,33 @@ body {
     font-weight: 500;
 }
 
-/* .balance-money span:nth-child(1) {
+.balance-money span {
+    display: inline-block;
+    margin: 6px 0 7px 10px;
+}
+
+.balance-money span:nth-child(1) {
     float: left;
 }
 
 .balance-money span:nth-child(2) {
     float: right;
-} */
+    padding-right: 10px;
+}
 
 .button-return {
+    float: right;
+}
+
+.button-return button {
     width: 94px;
-    background-color: #fff;
+    padding: 6px 9px 8px 9px;
+
+    background: #ffffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+
     font-size: 13px;
     font-weight: 500;
-    line-height: 1.447692307692308;
+    line-height: 1.461538461538462;
 }
