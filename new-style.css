@@ -19,7 +19,9 @@ ul {
 }
 
 button {
+    border: none;
     background-color: #fff;
+    cursor: pointer;
 }
 
 /* PC용 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때*/
@@ -71,6 +73,12 @@ body {
     justify-content: space-between;
 }
 
+.items-cola li:nth-child(1),
+.items-cola li:nth-child(2),
+.items-cola li:nth-child(3) {
+    margin-bottom: 12px;
+}
+
 .items-cola li button {
     width: 94px;
     padding: 0 11px 0 13px;
@@ -83,7 +91,7 @@ body {
     border: 3px solid #6327fe;
     border-radius: 10px;
 
-    text-align: center;
+    /* text-align: center; */
 }
 
 .items-cola li img {
@@ -92,7 +100,7 @@ body {
 
 .items-cola li strong {
     margin: 7px auto 9px;
-    padding: 5px 16px 5px 15px;
+    padding: 5px 0;
     display: block;
     width: 100%;
     background-color: #6327fe;
@@ -102,6 +110,85 @@ body {
     font-weight: 500;
     font-size: 12px;
     line-height: 1;
+}
+
+/**/
+.deposit-withdrawal {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.deposit-withdrawal li {
+    display: inline-block;
+    width: 200px;
+    padding: 6px 0 7px;
+
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.461538461538462;
+
+    border-radius: 5px;
+}
+
+.deposit-withdrawal li:nth-child(1) {
+    margin-bottom: 11px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.428571428571429;
+
+    background-color: #eae8fe;
+}
+
+.deposit-withdrawal li:nth-child(2) {
+    margin-bottom: 11px;
+}
+
+.deposit-withdrawal li:nth-child(3) {
+    margin-bottom: 11px;
+    width: 200px;
+    color: #bdbdbd;
+
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+}
+.deposit-withdrawal li:nth-child(4) {
+    margin-bottom: 11px;
+}
+
+.deposit-withdrawal li:nth-child(2n) {
+    margin-left: 12px;
+    width: 94px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.deposit-withdrawal li button {
+    width: 100%;
+    height: 100%;
+}
+/*items-cart*/
+.items-cart-button {
+    display: flex;
+}
+
+.items-cart-button li:nth-child(1) {
+    margin-right: 12px;
+    width: 200px;
+
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+
+    background-color: red;
+}
+
+.cart-button {
+    width: 94px;
+}
+
+.cart-button button {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
 }
 
 /*hold*/
