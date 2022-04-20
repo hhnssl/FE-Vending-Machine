@@ -7,6 +7,7 @@
 }
 
 body {
+    /* background-color: black; */
     background-color: #eae8fe;
 }
 
@@ -286,4 +287,27 @@ body {
     text-align: right;
     font-size: 12px;
     margin-top: 10px;
+}
+
+/* min-device-width: 최소 디바이너 너비 h*/
+/* -webkit-min-device-pixel-raio:2 <== 레티나 생각하면 되는듯? */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    /* 320px <= 디바이스의 너비 <=480*/
+    body {
+        background-color: #fff;
+    }
+
+    #app {
+        padding-top: 65px;
+    }
+
+    #app .tit-app {
+        width: 166px;
+        height: 70px;
+    }
+
+    .my-info .cont-myitems {
+        margin-top: 0;
+        padding: 31px 27px 32px;
+    }
 }
