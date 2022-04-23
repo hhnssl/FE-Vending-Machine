@@ -10,10 +10,16 @@ ul,
 button,
 h1,
 h2,
-input {
+input,
+strong,
+span,
+section,
+article {
     margin: 0;
     padding: 0;
     font-family: "Noto Sans KR", sans-serif;
+    box-sizing: border-box;
+    font-weight: 500;
 }
 
 ul {
@@ -24,6 +30,10 @@ button,
 input {
     border: none;
     background-color: transparent;
+}
+
+button {
+    cursor: pointer;
 }
 
 /*screen_out*/
@@ -57,18 +67,97 @@ header img {
 }
 
 .user-screen__item-list {
+    margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 12px;
 }
 
-.user-screen__select-button {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
+.user-screen__item-list li:active {
+    outline: 3px solid #6327fe;
+    border-radius: 10px;
+}
 
+.user-screen__select-button {
+    display: flex;
+    padding: 11px 11px 9px 13px;
+    width: 94px;
+    flex-direction: column;
     align-items: center;
 
-    box-sizing: border-box;
+    border-radius: 10px;
+
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+.user-screen__select-button img {
+    margin-bottom: 6px;
+}
+
+.user-screen__select-button strong:nth-child(2) {
+    margin-bottom: 7px;
+
+    color: #333333;
+    font-size: 9px;
+    line-height: 1.444444444444444;
+}
+
+.user-screen__select-button strong:last-child {
+    padding: 5px 16px 5px 15px;
+    width: 100%;
+
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+
+    border-radius: 50px;
+    background-color: #6327fe;
+}
+
+.user-screen__calculating > strong {
+    margin-bottom: 11px;
+    display: inline-block;
+    padding: 6px 10px 7px 10px;
+    width: 200px;
+
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #eae8fe;
+}
+
+.user-screen__calculating > strong span {
+    float: right;
+}
+
+/* button module */
+.user-screen__button {
+    float: right;
+    padding: 6px 9px 8px 9px;
+    width: 94px;
+
+    font-size: 13px;
+    line-height: 1.461538461538462;
+
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+}
+
+.user-screen__input-deposit {
+    padding: 6px 0 8px 6px;
+    width: 200px;
+
+    color: #bdbdbd;
+    font-size: 13px;
+    line-height: 1.461538461538462;
+
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+}
+
+/* module */
+.sold-out::after {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    z-index: 100;
 }

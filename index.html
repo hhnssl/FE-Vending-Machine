@@ -5,6 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Cola Cola</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
@@ -22,7 +28,11 @@
                 </h2>
                 <ul class="user-screen__item-list">
                     <li>
-                        <button type="button">
+                        <!-- BEM은 최대한 클래스 선택자를 사용하는 방식인데, 이렇게 음료 수정이 빈번할 요소에도 이런식으로 클래스를 일일이 부여하는 게 맞을까? -->
+                        <button
+                            class="user-screen__select-button"
+                            type="button"
+                        >
                             <img
                                 src="./images/original_cola.png"
                                 alt=""
@@ -31,35 +41,50 @@
                         </button>
                     </li>
                     <li>
-                        <button type="button">
+                        <button
+                            class="user-screen__select-button sold-out"
+                            type="button"
+                        >
                             <img src="./images/violet_cola.png" alt="" /><strong
                                 >Violet_Cola</strong
                             ><strong>1000원</strong>
                         </button>
                     </li>
                     <li>
-                        <button type="button">
+                        <button
+                            class="user-screen__select-button"
+                            type="button"
+                        >
                             <img src="./images/yellow_cola.png" alt="" /><strong
                                 >Yellow_Cola</strong
                             ><strong>1000원</strong>
                         </button>
                     </li>
                     <li>
-                        <button type="button">
+                        <button
+                            class="user-screen__select-button"
+                            type="button"
+                        >
                             <img src="./images/cool_cola.png" alt="" /><strong
                                 >Cool_Cola</strong
                             ><strong>1000원</strong>
                         </button>
                     </li>
                     <li>
-                        <button type="button">
+                        <button
+                            class="user-screen__select-button"
+                            type="button"
+                        >
                             <img src="./images/green_cola.png" alt="" /><strong
                                 >Green_Cola</strong
                             ><strong>1000원</strong>
                         </button>
                     </li>
                     <li>
-                        <button type="button">
+                        <button
+                            class="user-screen__select-button"
+                            type="button"
+                        >
                             <img src="./images/orange_cola.png" alt="" /><strong
                                 >Orange_Cola</strong
                             ><strong>1000원</strong>
@@ -70,7 +95,7 @@
                 <!-- 멘토님께 여쭤보기: 의미상으로 딱히 나눌 만한 부분이 아니고 디자인적으로 구분이 필요한 것 같아서 div를 사용하였다. 처음에는 ul을 썼는데 width를 제외하고 공통점이 별로 없는 것 같아서 마음을 바꿨다. div를 써도 되는 게 맞는지?-->
                 <div class="user-screen__calculating">
                     <strong>잔액 : <span>1,000 원</span></strong>
-                    <button class="user-screen__return-button" type="button">
+                    <button class="user-screen__button" type="button">
                         거스름돈 반환
                     </button>
                     <input
@@ -78,10 +103,7 @@
                         type="number"
                         placeholder="입금액 입력"
                     />
-                    <button
-                        class="user-screen__input-deposit-button"
-                        type="button"
-                    >
+                    <button class="user-screen__button" type="button">
                         입금
                     </button>
                     <ul class="user-screen__selected-list">

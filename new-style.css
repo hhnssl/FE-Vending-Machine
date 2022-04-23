@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /*reset*/
 * {
     box-sizing: border-box;
@@ -203,4 +205,8 @@ body {
 .items-hold {
     background-color: #fff;
     width: 360px;
+}
+
+/*module*/
+.selected-cola {
 }
