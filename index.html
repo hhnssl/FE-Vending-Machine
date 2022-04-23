@@ -4,117 +4,122 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>파이널 코딩테스트 7번</title>
+        <title>Cola Cola</title>
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-        <!-- 형태-의미 -->
-        <main class="vending-machine">
-            <h1 class="title-logo">
-                <img src="./images/logo.svg" alt="콜라 로고" class="img-logo" />
-            </h1>
+        <!-- 멘토님께 BEM 설계방법 피드백 받기: 클래스명이 너무 긴가요? -->
+        <header>
+            <img src="./images/Logo.png" alt="콜라콜라" />
+        </header>
 
-            <section class="screen-drinks">
-                <h2>스크린</h2>
-                <ul class="items-drinks">
-                    <li class="items-cola">
-                        <img src="./images/cola.svg" alt="cola" />
-                        <span>_Cola</span>
-                        <button>1000원</button>
+        <article class="container">
+            <h1 class="ir_pm">콜라콜라 음료수 자판기입니다.</h1>
+            <!--  -->
+            <section class="user-screen">
+                <h2 class="ir_pm">
+                    음료수를 선택하고 값을 지불해 획득하십시오.
+                </h2>
+                <ul class="user-screen__item-list">
+                    <li>
+                        <button type="button">
+                            <img
+                                src="./images/original_cola.png"
+                                alt=""
+                            /><strong>Original_Cola</strong
+                            ><strong>1000원</strong>
+                        </button>
                     </li>
-                    <li class="items-cola">
-                        <img src="./images/cola.svg" alt="cola" />
-                        <span>_Cola</span>
-                        <button>1000원</button>
+                    <li>
+                        <button type="button">
+                            <img src="./images/violet_cola.png" alt="" /><strong
+                                >Violet_Cola</strong
+                            ><strong>1000원</strong>
+                        </button>
                     </li>
-                    <li class="items-cola">
-                        <img src="./images/cola.svg" alt="cola" />
-                        <span>_Cola</span>
-                        <button>1000원</button>
+                    <li>
+                        <button type="button">
+                            <img src="./images/yellow_cola.png" alt="" /><strong
+                                >Yellow_Cola</strong
+                            ><strong>1000원</strong>
+                        </button>
                     </li>
-                    <li class="items-cola">
-                        <img src="./images/cola.svg" alt="cola" />
-                        <span>_Cola</span>
-                        <button>1000원</button>
+                    <li>
+                        <button type="button">
+                            <img src="./images/cool_cola.png" alt="" /><strong
+                                >Cool_Cola</strong
+                            ><strong>1000원</strong>
+                        </button>
                     </li>
-                    <li class="items-cola">
-                        <img src="./images/cola.svg" alt="cola" />
-                        <span>_Cola</span>
-                        <button>1000원</button>
+                    <li>
+                        <button type="button">
+                            <img src="./images/green_cola.png" alt="" /><strong
+                                >Green_Cola</strong
+                            ><strong>1000원</strong>
+                        </button>
                     </li>
-                    <li class="items-cola">
-                        <img src="./images/cola.svg" alt="cola" />
-                        <span>_Cola</span>
-                        <button>1000원</button>
+                    <li>
+                        <button type="button">
+                            <img src="./images/orange_cola.png" alt="" /><strong
+                                >Orange_Cola</strong
+                            ><strong>1000원</strong>
+                        </button>
                     </li>
                 </ul>
-                <div class="calculating-zone">
-                    <ul>
-                        <li class="balance-money">
-                            <span>잔액:</span>
-                            <span>1,000원</span>
-                        </li>
-                        <li class="button-return">
-                            <button>거스름돈 반환</button>
-                        </li>
+
+                <!-- 멘토님께 여쭤보기: 의미상으로 딱히 나눌 만한 부분이 아니고 디자인적으로 구분이 필요한 것 같아서 div를 사용하였다. 처음에는 ul을 썼는데 width를 제외하고 공통점이 별로 없는 것 같아서 마음을 바꿨다. div를 써도 되는 게 맞는지?-->
+                <div class="user-screen__calculating">
+                    <strong>잔액 : <span>1,000 원</span></strong>
+                    <button class="user-screen__return-button" type="button">
+                        거스름돈 반환
+                    </button>
+                    <input
+                        class="user-screen__input-deposit"
+                        type="number"
+                        placeholder="입금액 입력"
+                    />
+                    <button
+                        class="user-screen__input-deposit-button"
+                        type="button"
+                    >
+                        입금
+                    </button>
+                    <ul class="user-screen__selected-list">
                         <li>
-                            <input type="text" placeholder="입금액 입력" />
-                        </li>
-                        <li class="button-deposit">
-                            <button>입금</button>
-                        </li>
-                        <li>
-                            <ol>
-                                <li>
-                                    <img src="./images/cola.svg" alt="" />
-                                    Original_Cola
-                                    <span>1</span>
-                                </li>
-                                <li>
-                                    <img src="./images/cola.svg" alt="" />
-                                    Original_Cola
-                                    <span>1</span>
-                                </li>
-                            </ol>
-                        </li>
-                        <li>
-                            <button>획득</button>
+                            <button type="button">
+                                <img src="./images/original_cola.png" alt="" />
+                                <strong>Original_Cola</strong>
+                                <strong>1</strong>
+                            </button>
                         </li>
                     </ul>
+                    <button class="user-screen__get-button" type="button">
+                        획득
+                    </button>
                 </div>
             </section>
-
-            <section class="own-money">
-                <h2>소지금</h2>
-                <span>25,000원</span>
+            <!--  -->
+            <section class="user-info">
+                <h2>현재 사용자가 소지하고 있는 금액입니다.</h2>
+                <!-- 돈은 중요한 요소인데 strong 안에 strong을 넣기에는 의미가 겹치는 것 같아서 span으로 처리했다. 이미 strong 안에 넣었으니 돈이라는 요소가 강조가 됐다고 생각해도 될지? -->
+                <strong class="user-info__money"
+                    >소지금: <span>25,000 원</span></strong
+                >
             </section>
-
-            <section class="earned-items">
+            <!--  -->
+            <section class="user-earn">
                 <h2>획득한 음료</h2>
-                <ul class="items-list">
+                <ul class="user-earn__earned-list">
                     <li>
-                        <img src="./images/cola.svg" alt="" />
-                        Original_Cola
-                        <span>1</span>
-                    </li>
-                    <li>
-                        <img src="./images/cola.svg" alt="" />
-                        Original_Cola
-                        <span>1</span>
-                    </li>
-                    <li>
-                        <img src="./images/cola.svg" alt="" />
-                        Original_Cola
-                        <span>1</span>
-                    </li>
-                    <li>
-                        <img src="./images/cola.svg" alt="" />
-                        Original_Cola
-                        <span>1</span>
+                        <button type="button">
+                            <img src="./images/original_cola.png" alt="" />
+                            <strong>Original_Cola</strong>
+                            <strong>1</strong>
+                        </button>
                     </li>
                 </ul>
-                <span>총금액: 9,000원</span>
+                <strong>총금액: <span>9,000원</span></strong>
             </section>
-        </main>
+        </article>
     </body>
 </html>
