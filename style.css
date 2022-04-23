@@ -62,10 +62,13 @@ header img {
     gap: 12px;
 }
 
-.user-screen__item-list li {
-    /* clear: both; */
+.user-screen__select-button {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 
-    /* vertical-align: middle; */
+    align-items: center;
+
     box-sizing: border-box;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
 }
