@@ -58,8 +58,15 @@ header img {
     width: 386px;
 }
 
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 /* user-screen */
 .user-screen {
+    margin-right: 28px;
     padding: 31px 27px 28px;
     width: 360px;
 
@@ -132,8 +139,10 @@ header img {
 
 /* button module */
 .user-screen__button {
-    float: right;
+    /* 피그마는 11px인데.. 11주면 레이아웃이 깨짐.. */
+    margin-bottom: 10px;
     padding: 6px 9px 8px 9px;
+    float: right;
     width: 94px;
 
     font-size: 13px;
@@ -144,6 +153,7 @@ header img {
 }
 
 .user-screen__input-deposit {
+    margin-bottom: 10px;
     padding: 6px 0 8px 6px;
     width: 200px;
 
@@ -153,6 +163,127 @@ header img {
 
     border: 1px solid #bdbdbd;
     border-radius: 5px;
+}
+
+/* .user-screen__selected-list { */
+ul[class$="selected-list"] {
+    display: inline-block;
+    padding: 12px 18px 0 12px;
+    width: 200px;
+    height: 106px;
+
+    overflow: scroll;
+
+    background-color: #eae8fe;
+
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+}
+
+/* .user-screen__selected-item { */
+li[class$="selected-item"] {
+    padding: 6px 8px 10px 7px;
+    width: 100%;
+
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+li[class$="selected-item"] + li {
+    margin-top: 6px;
+}
+
+/* .user-screen__selected-item-button { */
+button[class$="selected-item-button"] {
+    width: 100%;
+}
+
+img[class$="item-img"] {
+    float: left;
+    width: 18px;
+}
+
+strong[class$="item-name"] {
+    color: #333333;
+    font-size: 9px;
+    line-height: 36px;
+}
+strong[class$="item-quantity"] {
+    float: right;
+    display: block;
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+
+    font-size: 14px;
+    line-height: 10px;
+}
+
+.user-screen__get-button {
+    float: right;
+    width: 94px;
+    height: 106px;
+
+    color: #fff;
+    font-weight: 700;
+    font-size: 13px;
+
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+    background-color: #6327fe;
+}
+
+/* user-info */
+.user-info {
+    /* float: right; */
+    margin-bottom: 20px;
+    padding: 9px 27px;
+    width: 360px;
+    background-color: #fff;
+}
+
+.user-info__money {
+    padding: 6px 10px;
+    display: block;
+    width: 100%;
+
+    border-radius: 5px;
+    background-color: #eae8fe;
+}
+
+.user-info__money span {
+    float: right;
+}
+
+/* user-earn  */
+.user-earn {
+    padding: 25px 27px 52px;
+    width: 360px;
+    background-color: #fff;
+}
+
+.user-earn h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.428571428571429;
+}
+
+.user-earn .user-earn__selected-list {
+    margin: 13px 0 6px;
+    display: block;
+    width: 100%;
+    height: 364px;
+}
+
+.user-earn__total {
+    float: right;
+    display: block;
+
+    font-size: 12px;
+    line-height: 1.416666666666667;
 }
 
 /* module */
