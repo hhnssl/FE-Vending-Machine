@@ -62,11 +62,12 @@ header img {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 28px;
 }
 
 /* user-screen */
 .user-screen {
-    margin-right: 28px;
+    /* margin-right: 28px; */
     padding: 31px 27px 28px;
     width: 360px;
 

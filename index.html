@@ -14,7 +14,6 @@
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-        <!-- 멘토님께 BEM 설계방법 피드백 받기: 클래스명이 너무 긴가요? -->
         <header>
             <img src="./images/Logo.png" alt="콜라콜라" />
         </header>
@@ -28,7 +27,6 @@
                 </h2>
                 <ul class="user-screen__item-list">
                     <li>
-                        <!-- BEM은 최대한 클래스 선택자를 사용하는 방식인데, 이렇게 음료 수정이 빈번할 요소에도 이런식으로 클래스를 일일이 부여하는 게 맞을까? -->
                         <button
                             class="user-screen__select-button"
                             type="button"
@@ -92,7 +90,6 @@
                     </li>
                 </ul>
 
-                <!-- 멘토님께 여쭤보기: 의미상으로 딱히 나눌 만한 부분이 아니고 디자인적으로 구분이 필요한 것 같아서 div를 사용하였다. 처음에는 ul을 썼는데 width를 제외하고 공통점이 별로 없는 것 같아서 마음을 바꿨다. div를 써도 되는 게 맞는지?-->
                 <!-- 이 부분 패딩이 1px 정도씩 맞지 않음.. 레이아웃 틀어져서. 이유가 뭔지 모르겠다! -->
                 <div class="user-screen__calculating">
                     <strong>잔액 : <span>1,000 원</span></strong>
@@ -156,7 +153,6 @@
                     <h2 class="ir_pm">
                         현재 사용자가 소지하고 있는 금액입니다.
                     </h2>
-                    <!-- 돈은 중요한 요소인데 strong 안에 strong을 넣기에는 의미가 겹치는 것 같아서 span으로 처리했다. 이미 strong 안에 넣었으니 돈이라는 요소가 강조가 됐다고 생각해도 될지? -->
                     <strong class="user-info__money"
                         >소지금: <span>25,000 원</span></strong
                     >
@@ -183,13 +179,6 @@
                                 >
                             </button>
                         </li>
-                        <!-- <li>
-                            <button type="button">
-                                <img src="./images/original_cola.png" alt="" />
-                                <strong>Original_Cola</strong>
-                                <strong>1</strong>
-                            </button>
-                        </li> -->
                     </ul>
                     <strong class="user-earn__total"
                         >총금액: <span>9,000원</span></strong
