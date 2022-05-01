@@ -1,292 +1,338 @@
 @charset "utf-8";
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap');
 
-/* reset */
-body,
-ul,
-button,
-h1,
-h2,
-input,
-strong,
-span,
-section,
-article {
-    margin: 0;
-    padding: 0;
-    font-family: "Noto Sans KR", sans-serif;
-    box-sizing: border-box;
-    font-weight: 500;
+/*screen_out*/
+.ir {
+  position: absolute;
+  overflow: hidden;
+  font-size: 1px;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+/* reset*/
+body, main, section, div,
+h1,h2,
+ul, li, 
+strong, span,
+input, button{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
-button,
-input {
-    border: none;
-    background-color: transparent;
+input{
+  border: none;
 }
 
-button {
-    cursor: pointer;
+button{
+  cursor: pointer;
+  border: none;
+  background-color: #fff;
 }
 
-/*screen_out*/
-.ir_pm {
-    display: block;
-    overflow: hidden;
-    font-size: 1px;
-    line-height: 0;
-    text-indent: -9999px;
+strong, span{
+  display: block;
 }
 
-/**/
-body {
-    background-color: #eae8fe;
+/* 시작 */
+body{
+  background: #EAE8FE;
 }
 
-header {
-    text-align: center;
+.main{
+  padding-top: 247px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:0 28px;
 }
 
-header img {
-    width: 386px;
+.main__logo {
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  
+  width: 100%;
+  max-width: 386px;
+  height: 180px;
+
+  background-image: url("./images/Logo.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 28px;
+.header__img {
+  width: 100%;
+  max-width: 386px;
 }
 
-/* user-screen */
-.user-screen {
-    /* margin-right: 28px; */
-    padding: 31px 27px 28px;
-    width: 360px;
+/* 1 screen */
+.screen{
+  padding: 31px 27px 28px;
+  width: 360px;
+  height: 545px;
+  
+  background-color: #fff;
+}
 
+.screen__list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 12px;
+  gap: 12px;
+}
+
+.screen__item{
+  position: relative;
+
+  z-index: 10;
+}
+
+.screen--sold-out::after{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  content: "";
+
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url("./images/sold-out.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.screen__item-btn{
+  padding: 11px 11px 9px 13px;
+  width: 100%;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.screen__item-btn:active{
+  outline: 3px solid #6327FE ;
+  border-radius: 10px;
+}
+
+.screen__item-img{
+  width: 36px;
+}
+
+.screen__name{
+  margin: 6px 0 7px;
+
+  color: #333333;
+  line-height: 1.444444444444444;
+}
+
+.screen__price{
+  padding: 5px 15px;
+
+  background-color: #6327FE;
+  border-radius: 50px;
+
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+}
+
+/* screen - counter */
+.counter{
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 11px 12px;
+}
+
+.counter__user{
+  padding: 6px 10px 7px;
+  grid-column: 1/3;
+
+  background-color: #EAE8FE;
+  border-radius: 5px;
+
+  font-size: 14px;
+}
+
+.counter__balance{
+  float: right;
+
+  font-size: 14px;
+}
+
+.counter__return-btn{
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.counter__deposit{
+  padding: 6px 0 8px 6px;
+  grid-column: 1/3;
+
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+
+  color: #BDBDBD;
+  font-size: 13px;
+}
+
+.counter__deposit-btn{
+  font-size: 13px;
+
+  border-radius: 5px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* 2 money */
+.money{
+  padding: 9px 27px;
+  margin-bottom: 20px;
+  width: 360px;
+  height: 50px;
+
+  background-color: #fff;
+}
+
+.money__user{
+  margin: 0 auto;
+  padding: 0 10px;
+  
+  width: 306px;
+  height: 32px;
+  
+  background-color: #EAE8FE;
+  border-radius: 5px;
+
+  text-align: left;
+  font-size: 14px;
+  line-height: 32px;
+}
+
+.money__balance{
+  float: right;
+  font-weight: 700;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.cart{
+  padding: 12px 18px 0 12px;
+  height: 106px;
+  grid-column: 1/3;
+  overflow: scroll;
+
+  background-color: #EAE8FE;
+  border: 1px solid #BDBDBD ;
+  border-radius: 5px;
+}
+
+.cart__list + li{
+  margin-top: 6px;
+}
+
+.cart__btn{
+  padding: 6px 8px 7px 10px;
+  width: 100%;
+  border-radius: 5px;
+
+}
+
+.cart__item-img{
+  margin-right: 10px;
+  float: left;
+  width: 18px;
+}
+
+.cart__name{
+  float: left;
+  transform: translateY(50%);
+
+  color: #333333;
+}
+
+.cart__quantity{
+  padding-top: 4px;
+  float: right;
+  width: 30px;
+  height: 30px;
+  
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+
+  font-size: 14px;
+  vertical-align: middle;
+}
+
+.counter__get-btn{
+  grid-column: 3/4;
+
+  background-color: #6327FE;
+  border-radius: 5px;
+
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* 3 earned */
+.earned{
+  padding: 25px 27px 26px;
+  width: 360px;
+  height: 474px;
+
+  background-color: #fff;
+}
+
+.earned__title{
+  margin-bottom: 13px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.cart--size{
+  height: 364px;
+}
+
+.earned__total{
+  margin-top: 6px;
+  
+  float: right;
+  font-size: 12px;
+}
+
+.earned__balance{
+  margin-left: 3px;
+  float: right;
+  font-size: inherit;
+}
+
+@media screen and (max-width: 390px){
+  body{
     background-color: #fff;
-}
+  }
 
-.user-screen__item-list {
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 12px;
-}
+  .main{
+    padding-top: 65px;
+  }
 
-.user-screen__item-list li:active {
-    outline: 3px solid #6327fe;
-    border-radius: 10px;
-}
-
-.user-screen__select-button {
-    display: flex;
-    padding: 11px 11px 9px 13px;
-    width: 94px;
-    flex-direction: column;
-    align-items: center;
-
-    border-radius: 10px;
-
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-}
-
-.user-screen__select-button img {
-    margin-bottom: 6px;
-}
-
-.user-screen__select-button strong:nth-child(2) {
-    margin-bottom: 7px;
-
-    color: #333333;
-    font-size: 9px;
-    line-height: 1.444444444444444;
-}
-
-.user-screen__select-button strong:last-child {
-    padding: 5px 16px 5px 15px;
-    width: 100%;
-
-    color: #fff;
-    font-size: 12px;
-    line-height: 1;
-
-    border-radius: 50px;
-    background-color: #6327fe;
-}
-
-.user-screen__calculating > strong {
-    margin-bottom: 11px;
-    display: inline-block;
-    padding: 6px 10px 7px 10px;
-    width: 200px;
-
-    font-size: 14px;
-    border-radius: 5px;
-    background-color: #eae8fe;
-}
-
-.user-screen__calculating > strong span {
-    float: right;
-}
-
-/* button module */
-.user-screen__button {
-    /* 피그마는 11px인데.. 11주면 레이아웃이 깨짐.. */
-    margin-bottom: 10px;
-    padding: 6px 9px 8px 9px;
-    float: right;
-    width: 94px;
-
-    font-size: 13px;
-    line-height: 1.461538461538462;
-
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-}
-
-.user-screen__input-deposit {
-    margin-bottom: 10px;
-    padding: 6px 0 8px 6px;
-    width: 200px;
-
-    color: #bdbdbd;
-    font-size: 13px;
-    line-height: 1.461538461538462;
-
-    border: 1px solid #bdbdbd;
-    border-radius: 5px;
-}
-
-/* .user-screen__selected-list { */
-ul[class$="selected-list"] {
-    display: inline-block;
-    padding: 12px 18px 0 12px;
-    width: 200px;
-    height: 106px;
-
-    overflow: scroll;
-
-    background-color: #eae8fe;
-
-    border: 1px solid #bdbdbd;
-    border-radius: 5px;
-}
-
-/* .user-screen__selected-item { */
-li[class$="selected-item"] {
-    padding: 6px 8px 10px 7px;
-    width: 100%;
-
-    background-color: #fff;
-    border-radius: 5px;
-}
-
-li[class$="selected-item"] + li {
-    margin-top: 6px;
-}
-
-/* .user-screen__selected-item-button { */
-button[class$="selected-item-button"] {
-    width: 100%;
-}
-
-img[class$="item-img"] {
-    float: left;
-    width: 18px;
-}
-
-strong[class$="item-name"] {
-    color: #333333;
-    font-size: 9px;
-    line-height: 36px;
-}
-strong[class$="item-quantity"] {
-    float: right;
-    display: block;
-    width: 30px;
-    height: 30px;
-
-    border: 1px solid #bdbdbd;
-    border-radius: 5px;
-
-    font-size: 14px;
-    line-height: 10px;
-}
-
-.user-screen__get-button {
-    float: right;
-    width: 94px;
-    height: 106px;
-
-    color: #fff;
-    font-weight: 700;
-    font-size: 13px;
-
-    border-radius: 5px;
-    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
-    background-color: #6327fe;
-}
-
-/* user-info */
-.user-info {
-    /* float: right; */
-    margin-bottom: 20px;
-    padding: 9px 27px;
-    width: 360px;
-    background-color: #fff;
-}
-
-.user-info__money {
-    padding: 6px 10px;
-    display: block;
-    width: 100%;
-
-    border-radius: 5px;
-    background-color: #eae8fe;
-}
-
-.user-info__money span {
-    float: right;
-}
-
-/* user-earn  */
-.user-earn {
-    padding: 25px 27px 52px;
-    width: 360px;
-    background-color: #fff;
-}
-
-.user-earn h2 {
-    text-align: center;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.428571428571429;
-}
-
-.user-earn .user-earn__selected-list {
-    margin: 13px 0 6px;
-    display: block;
-    width: 100%;
-    height: 364px;
-}
-
-.user-earn__total {
-    float: right;
-    display: block;
-
-    font-size: 12px;
-    line-height: 1.416666666666667;
-}
-
-/* module */
-.sold-out::after {
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    z-index: 100;
+  .main__logo {
+    max-width: 166px;
+    height: 100%;
+    max-height: 71.12px;
+  }
 }
