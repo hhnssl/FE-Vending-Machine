@@ -50,7 +50,7 @@ body{
 }
 
 .main{
-  padding-top: 247px;
+  padding: 247px 0 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -98,6 +98,10 @@ body{
   position: relative;
 
   z-index: 10;
+}
+
+.screen--sold-out{
+  pointer-events: none;
 }
 
 .screen--sold-out::after{
@@ -160,6 +164,7 @@ body{
 .counter__user{
   padding: 6px 10px 7px;
   grid-column: 1/3;
+  height:33px;
 
   background-color: #EAE8FE;
   border-radius: 5px;
@@ -169,11 +174,13 @@ body{
 
 .counter__balance{
   float: right;
+  
 
   font-size: 14px;
 }
 
 .counter__return-btn{
+  height:33px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   font-size: 13px;
@@ -182,6 +189,7 @@ body{
 .counter__deposit{
   padding: 6px 0 8px 6px;
   grid-column: 1/3;
+  height:33px;
 
   border: 1px solid #BDBDBD;
   border-radius: 5px;
@@ -192,6 +200,7 @@ body{
 
 .counter__deposit-btn{
   font-size: 13px;
+  height:33px;
 
   border-radius: 5px;
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
@@ -321,7 +330,7 @@ body{
   font-size: inherit;
 }
 
-@media screen and (max-width: 390px){
+@media screen and (min-device-width: 414px) and (max-device-width: 390px){
   body{
     background-color: #fff;
   }
