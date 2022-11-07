@@ -1,176 +1,157 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cola Cola</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <main class="main">
-      <h1 class="main__logo ir">Cola Cola 음료 자판기</h1>
-  
-      <!-- 1번 -->
-      <section class="screen">
-        <h2 class="ir">음료 선택</h2>
-        <ul class="screen__list">
-          <li class="screen__item">
-            <button class="screen__item-btn" type="button">
-              <img
-                class="screen__item-img"
-                src="./images/original_cola.png"
-                alt=""
-              />
-              <strong class="screen__name">Original_Cola</strong>
-              <strong class="screen__price">1000원</strong>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cola Cola</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <main class="main">
+    <h1 class="main__logo ir">Cola Cola 음료 자판기</h1>
+
+    <!-- 1번 -->
+    <section class="screen">
+      <h2 class="ir">음료 선택</h2>
+      <ul class="screen__list">
+        <li class="screen__item">
+          <button class="screen__item-btn" type="button">
+            <img class="screen__item-img" src="./images/original_cola.png" alt="" />
+            <strong class="screen__name">Original_Cola</strong>
+            <strong class="screen__price">1000원</strong>
+          </button>
+        </li>
+
+        <li class="screen__item">
+          <button class="screen__item-btn screen--sold-out" type="button">
+            <img class="screen__item-img" src="./images/violet_cola.png" alt="" />
+            <strong class="screen__name">Violet_Cola</strong>
+            <strong class="screen__price">1000원</strong>
+          </button>
+        </li>
+
+        <li class="screen__item">
+          <button class="screen__item-btn" type="button">
+            <img class="screen__item-img" src="./images/yellow_cola.png" alt="" />
+            <strong class="screen__name">Yellow_Cola</strong>
+            <strong class="screen__price">1000원</strong>
+          </button>
+        </li>
+
+        <li class="screen__item">
+          <button class="screen__item-btn" type="button">
+            <img class="screen__item-img" src="./images/cool_cola.png" alt="" />
+            <strong class="screen__name">Cool_Cola</strong>
+            <strong class="screen__price">1000원</strong>
+          </button>
+        </li>
+
+        <li class="screen__item">
+          <button class="screen__item-btn" type="button">
+            <img class="screen__item-img" src="./images/green_cola.png" alt="" />
+            <strong class="screen__name">Green_Cola</strong>
+            <strong class="screen__price">1000원</strong>
+          </button>
+        </li>
+
+        <li class="screen__item">
+          <button class="screen__item-btn" type="button">
+            <img class="screen__item-img" src="./images/orange_cola.png" alt="" />
+            <strong class="screen__name">Orange_Cola</strong>
+            <strong class="screen__price">1000원</strong>
+          </button>
+        </li>
+      </ul>
+
+      <!-- 1번-2 -->
+      <section class="counter">
+        <h2 class="ir">결제 정보</h2>
+        <strong class="counter__user">
+          잔액:
+          <span class="counter__balance">1,000원</span>
+        </strong>
+        <button class="counter__return-btn">거스름돈 반환</button>
+        <input class="counter__deposit" type="text" placeholder="입금액 입력" />
+        <button class="counter__deposit-btn" type="button">입금</button>
+
+        <ul class="cart">
+          <li class="cart__list">
+            <button class="cart__btn" type="button">
+              <img class="cart__item-img" src="./images/original_cola.png" alt="">
+              <strong class="cart__name">Original_Cola</strong>
+              <strong class="cart__quantity">1</strong>
             </button>
           </li>
 
-          <li class="screen__item">
-            <button class="screen__item-btn screen--sold-out" type="button">
-              <img
-                class="screen__item-img"
-                src="./images/violet_cola.png"
-                alt=""
-              />
-              <strong class="screen__name">Violet_Cola</strong>
-              <strong class="screen__price">1000원</strong>
-            </button>
-          </li>
-
-          <li class="screen__item">
-            <button class="screen__item-btn" type="button">
-              <img
-                class="screen__item-img"
-                src="./images/yellow_cola.png"
-                alt=""
-              />
-              <strong class="screen__name">Yellow_Cola</strong>
-              <strong class="screen__price">1000원</strong>
-            </button>
-          </li>
-
-          <li class="screen__item">
-            <button class="screen__item-btn" type="button">
-              <img
-                class="screen__item-img"
-                src="./images/cool_cola.png"
-                alt=""
-              />
-              <strong class="screen__name">Cool_Cola</strong>
-              <strong class="screen__price">1000원</strong>
-            </button>
-          </li>
-
-          <li class="screen__item">
-            <button class="screen__item-btn" type="button">
-              <img
-                class="screen__item-img"
-                src="./images/green_cola.png"
-                alt=""
-              />
-              <strong class="screen__name">Green_Cola</strong>
-              <strong class="screen__price">1000원</strong>
-            </button>
-          </li>
-
-          <li class="screen__item">
-            <button class="screen__item-btn" type="button">
-              <img
-                class="screen__item-img"
-                src="./images/orange_cola.png"
-                alt=""
-              />
-              <strong class="screen__name">Orange_Cola</strong>
-              <strong class="screen__price">1000원</strong>
+          <li class="cart__list">
+            <button class="cart__btn" type="button">
+              <img class="cart__item-img" src="./images/green_cola.png" alt="">
+              <strong class="cart__name">Green_Cola</strong>
+              <strong class="cart__quantity">2</strong>
             </button>
           </li>
         </ul>
-  
-        <!-- 1번-2 -->
-        <section class="counter">
-          <h2 class="ir">결제 정보</h2>
-          <strong class="counter__user">
-            잔액:
-            <span class="counter__balance">1,000원</span>
-          </strong>
-          <button class="counter__return-btn">거스름돈 반환</button>
-          <input class="counter__deposit" type="text" placeholder="입금액 입력" />
-          <button class="counter__deposit-btn" type="button">입금</button>
-
-          <ul class="cart">
-            <li class="cart__list">
-              <button class="cart__btn" type="button">
-                <img class="cart__item-img" src="./images/original_cola.png" alt="">
-                <strong class="cart__name">Original_Cola</strong>
-                <strong class="cart__quantity">1</strong>
-              </button>
-            </li>
-
-            <li class="cart__list">
-              <button class="cart__btn" type="button">
-                <img class="cart__item-img" src="./images/green_cola.png" alt="">
-                <strong class="cart__name">Green_Cola</strong>
-                <strong class="cart__quantity">2</strong>
-              </button>
-            </li>
-          </ul>
-          <button class="counter__get-btn" type="button">획득</button>
-        </section>
+        <button class="counter__get-btn" type="button">획득</button>
       </section>
-  
-      <!-- 1 + 2번 -->
-      <div class="info">
-        <!-- 2번 -->
-        <section class="money">
-          <h2 class="ir">현재 소지하고 있는 금액</h2>
-          <strong class="money__user">
-            소지금:
-            <span class="money__balance">25,000원</span>
-          </strong>
-        </section>
-    
-        <!-- 3번 -->
-        <section class="earned">
-          <h2 class="earned__title">획득한 음료</h2>
+    </section>
 
-          <ul class="cart cart--size">
-            <li class="cart__list">
-              <button class="cart__btn" type="button">
-                <img class="cart__item-img" src="./images/original_cola.png" alt="">
-                <strong class="cart__name">Original_Cola</strong>
-                <strong class="cart__quantity">1</strong>
-              </button>
-            </li>
-            <li class="cart__list">
-              <button class="cart__btn" type="button">
-                <img class="cart__item-img" src="./images/green_cola.png" alt="">
-                <strong class="cart__name">Green_Cola</strong>
-                <strong class="cart__quantity">2</strong>
-              </button>
-            </li>
-            <li class="cart__list">
-              <button class="cart__btn" type="button">
-                <img class="cart__item-img" src="./images/orange_cola.png" alt="">
-                <strong class="cart__name">Orange_Cola</strong>
-                <strong class="cart__quantity">1</strong>
-              </button>
-            </li>
-            <li class="cart__list">
-              <button class="cart__btn" type="button">
-                <img class="cart__item-img" src="./images/violet_cola.png" alt="">
-                <strong class="cart__name">Violet_Cola</strong>
-                <strong class="cart__quantity">5</strong>
-              </button>
-            </li>
-          </ul>
-          <strong class="earned__total">
-            총금액:
-            <span class="earned__balance">9,000원</span>
-          </strong>
-        </section>
-      </div>
-    </main>
-  </body>
+    <!-- 1 + 2번 -->
+    <div class="info">
+      <!-- 2번 -->
+      <section class="money">
+        <h2 class="ir">현재 소지하고 있는 금액</h2>
+        <strong class="money__user">
+          소지금:
+          <span class="money__balance">25,000원</span>
+        </strong>
+      </section>
+
+      <!-- 3번 -->
+      <section class="earned">
+        <h2 class="earned__title">획득한 음료</h2>
+
+        <ul class="cart cart--size">
+          <li class="cart__list">
+            <button class="cart__btn" type="button">
+              <img class="cart__item-img" src="./images/original_cola.png" alt="">
+              <strong class="cart__name">Original_Cola</strong>
+              <strong class="cart__quantity">1</strong>
+            </button>
+          </li>
+          <li class="cart__list">
+            <button class="cart__btn" type="button">
+              <img class="cart__item-img" src="./images/green_cola.png" alt="">
+              <strong class="cart__name">Green_Cola</strong>
+              <strong class="cart__quantity">2</strong>
+            </button>
+          </li>
+          <li class="cart__list">
+            <button class="cart__btn" type="button">
+              <img class="cart__item-img" src="./images/orange_cola.png" alt="">
+              <strong class="cart__name">Orange_Cola</strong>
+              <strong class="cart__quantity">1</strong>
+            </button>
+          </li>
+          <li class="cart__list">
+            <button class="cart__btn" type="button">
+              <img class="cart__item-img" src="./images/violet_cola.png" alt="">
+              <strong class="cart__name">Violet_Cola</strong>
+              <strong class="cart__quantity">5</strong>
+            </button>
+          </li>
+        </ul>
+        <strong class="earned__total">
+          총금액:
+          <span class="earned__balance">9,000원</span>
+        </strong>
+      </section>
+    </div>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+
 </html>
